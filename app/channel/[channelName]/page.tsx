@@ -1,6 +1,7 @@
+import { PageProps } from "@/.next/types/app/page";
 import Call from "@/components/Call";
 
-const page = async ({ params }: { params: { channelName: string } }) => {
+const page = async ({ params }: PageProps) => {
   const channelName = (await params).channelName;
   return (
     <main className="flex w-full flex-col">
